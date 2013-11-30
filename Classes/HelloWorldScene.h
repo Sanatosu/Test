@@ -2,27 +2,38 @@
 #define __HELLOWORLD_SCENE_H__
 
 #include "cocos2d.h"
+#include "Player.h"
 
-//class HelloWorld : public cocos2d::CCLayer
-//class HelloWorld : public cocos2d::CCLayerColor
-class HelloWorld : public cocos2d::CCLayerGradient
+class HelloWorld : public cocos2d::CCLayerColor
 {
 public:
-    // Here's a difference. Method 'init' in cocos2d-x returns bool, instead of returning 'id' in cocos2d-iphone
-    virtual bool init();  
 
-    // there's no 'id' in cpp, so we recommend returning the class instance pointer
+    virtual bool init();
+
     static cocos2d::CCScene* scene();
     
-    // a selector callback
     void menuCloseCallback(CCObject* pSender);
     
-    // implement the "static node()" method manually
     CREATE_FUNC(HelloWorld);
 
+	virtual bool ccTouchBegan(cocos2d::CCTouch *pTouch, cocos2d::CCEvent *pEvent);
+	virtual void ccTouchMoved(cocos2d::CCTouch *pTouch, cocos2d::CCEvent *pEvent);
+	virtual void ccTouchEnded(cocos2d::CCTouch *pTouch, cocos2d::CCEvent *pEvent);
+	virtual void ccTouchCancelled(cocos2d::CCTouch *pTouch, cocos2d::CCEvent *pEvent);
+
+	virtual void ccTouchesBegan(cocos2d::CCSet *pTouches, cocos2d::CCEvent *pEvent);
+	virtual void ccTouchesMoved(cocos2d::CCSet *pTouches, cocos2d::CCEvent *pEvent);
+	virtual void ccTouchesEnded(cocos2d::CCSet *pTouches, cocos2d::CCEvent *pEvent);
+	virtual void ccTouchesCancelled(cocos2d::CCSet *pTouches, cocos2d::CCEvent *pEvent);
+
+    virtual void update(float dt);
+
 private:
-    //cocos2d::CCSprite* pSprite;
     cocos2d::CCSprite* pSprite;
+    Player* pPlayer;
+
+    cocos2d::CCPoint m_pStartPoint;
+    cocos2d::CCPoint m_pDelta;
 };
 
 #endif // __HELLOWORLD_SCENE_H__

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="30" height="30" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="japan_map001" tilewidth="32" tileheight="32">
+  <image source="japan_map001.png" width="352" height="160"/>
+ </tileset>
+ <tileset firstgid="56" name="japan_map001" tilewidth="32" tileheight="32">
+  <image source="japan_map001.png" width="352" height="160"/>
+ </tileset>
+ <tileset firstgid="111" name="japan_map001" tilewidth="32" tileheight="32">
+  <image source="japan_map001.png" width="352" height="160"/>
+ </tileset>
+ <tileset firstgid="166" name="castle01_a" tilewidth="32" tileheight="32">
+  <image source="castle01_a.bmp" width="480" height="256"/>
+ </tileset>
+ <tileset firstgid="286" name="japan_map001" tilewidth="32" tileheight="32">
+  <image source="japan_map001.png" width="352" height="160"/>
+ </tileset>
+ <layer name="タイル・レイヤー1" width="30" height="30">
+  <data encoding="base64" compression="zlib">
+   eJztwwENAAAMw6BqmH+xF3JIWDVVVVXfPZjzP0k=
+  </data>
+ </layer>
+</map>
